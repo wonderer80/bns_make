@@ -1,0 +1,2 @@
+module BnsMarketHelper
+end

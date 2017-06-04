@@ -1,0 +1,10 @@
+<html>
+<body>
+  <h2>월석(개수 35개, 제작시간 1일)</h2>
+  <div>재료비: <%= @price.round(2) %></div>
+  <div>제작비: <%= @production_cost %></div>
+  <div>총제작비: <%= @total_cost.round(2) %></div>
+  <div>판매수익(수수료 7%): <%= @item_price.round(2) %></div>
+  <div>차익: <%= @earning_price.round(2) %></div>
+</body>
+</html>
