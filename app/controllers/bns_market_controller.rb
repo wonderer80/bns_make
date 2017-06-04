@@ -12,7 +12,8 @@ class BnsMarketController < ApplicationController
 
     @production_cost = 180
     @total_cost = @price + @production_cost
-    @item_price = BnsMarket.item_price('진화석') * 35 * 0.92
+    # 가격 * 생산수 - 수수료(0.7%)
+    @item_price = BnsMarket.item_price('진화석') * 35 * 0.93
     @earning_price = @item_price - @total_cost
   end
 
