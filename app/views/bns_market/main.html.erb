@@ -1,10 +1,19 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <html>
 <body>
-  <h2>월석(개수 35개, 제작시간 1일)</h2>
-  <div>재료비: <%= @price.round(2) %></div>
-  <div>제작비: <%= @production_cost %></div>
-  <div>총제작비: <%= @total_cost.round(2) %></div>
-  <div>판매수익(수수료 7%): <%= @item_price.round(2) %></div>
-  <div>차익: <%= @earning_price.round(2) %></div>
+<div class="container">
+  <h4>월석(개수 35개, 제작시간 1일)</h4>
+  <table class="table">
+    <tr><td>재료비</td> <td><%= @price.round(2) %></td></tr>
+    <tr><td>제작비</td> <td><%= @production_cost %></td></tr>
+    <tr class="danger"><td>총제작비</td> <td><%= @total_cost.round(2) %></td></tr>
+    <tr class="info"><td>판매수익(수수료 7%)</td> <td><%= @item_price.round(2) %></td></tr>
+    <tr class="success"><td>차익</td> <td><%= @earning_price.round(2) %></td></tr>
+  </table>
+  <h5>갱신시간: <%= Time.now.strftime('%F %T') %></h5>
+  <h5>문의사항: <a href="http://sandbox.plaync.com/5B3C93F8-D15F-E011-9A06-E61F135E992F">라일락꿀향기</a></h5>
+</div>
 </body>
 </html>
