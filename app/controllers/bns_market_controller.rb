@@ -19,6 +19,15 @@ class BnsMarketController < ApplicationController
                         { name: '영석', num: 850 },
                         { name: '영단', num: 850 },
                         { name: '선단', num: 370 }]
+        },
+        {
+            made_item_name: '팔각 금강석 주머니',
+            made_item_num: 3,
+            made_price: 900,
+            materials: [{ name: '월석', num: 370 },
+                        { name: '영석', num: 850 },
+                        { name: '영단', num: 850 },
+                        { name: '선단', num: 370 }]
         }
     ]
     @result = []
