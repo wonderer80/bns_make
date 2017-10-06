@@ -127,7 +127,6 @@ class BnsMarketController < ApplicationController
     made_item_infos.each do |info|
       @result << info.merge(item_cost(info))
     end
-
   end
 
   def item_cost(made_item_info)
@@ -136,7 +135,6 @@ class BnsMarketController < ApplicationController
     result = {}
     result[:price] = materials.inject(0) do |sum, item|
       sum += (BnsMarket.item_price(item[:name]) * item[:num])
-      puts "#{item[:name]}: #{BnsMarket.item_price(item[:name])}"
       sum
     end
 
