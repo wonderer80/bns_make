@@ -125,7 +125,10 @@ class BnsMarketController < ApplicationController
     ]
     @result = []
     made_item_infos.each do |info|
-      @result << info.merge(item_cost(info))
+      info.merge!(item_cost(info))
+      info[:earning_by_hour] = (info[:earning_price] / (info[:made_time]/60/60)).round(2)
+
+      @result << info if info[:earning_by_hour] > 10
     end
   end
 

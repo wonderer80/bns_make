@@ -6,8 +6,4 @@ module BnsMarketHelper
     time_str = time_str + "#{hour}H" if hour > 0
     time_str
   end
-
-  def earning_by_hour(earning_price, second)
-    earning_price / (second/60/60)
-  end
 end

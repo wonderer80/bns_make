@@ -12,7 +12,7 @@
         <tr class="danger"><td>총제작비</td> <td><%= i[:total_cost].round(2) %></td></tr>
         <tr class="info"><td>판매수익(수수료 7%)</td> <td><%= i[:item_price].round(2) %></td></tr>
         <tr class="success"><td>차익</td> <td><%= i[:earning_price].round(2) %></td></tr>
-        <tr class="success"><td>시간당 이익</td> <td><%= earning_by_hour(i[:earning_price], i[:made_time]).round(2) %></td></tr>
+        <tr class="success"><td>시간당 이익</td> <td><%= i[:earning_by_hour] %></td></tr>
       </table>
   <% end %>
   <h5>갱신시간: <%= Time.now.strftime('%F %T') %></h5>
