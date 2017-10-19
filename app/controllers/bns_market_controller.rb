@@ -128,7 +128,9 @@ class BnsMarketController < ApplicationController
       info.merge!(item_cost(info))
       info[:earning_by_hour] = (info[:earning_price] / (info[:made_time]/60/60)).round(2)
 
-      @result << info if info[:earning_by_hour] > 10
+      if info[:earning_by_hour] > params[:earn].to_i
+        @result << info
+      end
     end
   end
 
