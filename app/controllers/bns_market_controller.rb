@@ -2,6 +2,7 @@ class BnsMarketController < ApplicationController
   def main
 
     made_item_infos = [
+        # 철무방
         {
             made_item_name: '진화석',
             made_item_num: 35,
@@ -26,6 +27,7 @@ class BnsMarketController < ApplicationController
                         { name: '선단', num: 370 }
             ]
         },
+        # 태상문
         {
             made_item_name: '명인 합성목편 묶음',
             made_item_num: 6,
@@ -48,6 +50,19 @@ class BnsMarketController < ApplicationController
                 { name: '월석', num: 30 },
                 { name: '영단', num: 115 },
                 { name: '선단', num: 30 }
+            ]
+        },
+        # 만금당
+        {
+            made_item_name: '사성 금강석 주머니',
+            made_item_num: 2,
+            made_price: 1260,
+            made_time: 7.days,
+            materials: [
+                        { name: '영석', num: 1620 },
+                        { name: '월석', num: 405 },
+                        { name: '영단', num: 1620 },
+                        { name: '선단', num: 405 }
             ]
         },
         {
@@ -74,6 +89,7 @@ class BnsMarketController < ApplicationController
                         { name: '선단', num: 370 }
             ]
         },
+        # 일미문
         {
             made_item_name: '순한 만두 음식상자',
             made_item_num: 20,
@@ -110,9 +126,35 @@ class BnsMarketController < ApplicationController
                 { name: '선단', num: 60 }
             ]
         },
+        # 약왕원
         {
             made_item_name: '천년초 비약 상자',
             made_item_num: 25,
+            made_price: 180,
+            made_time: 1.day,
+            materials: [
+                { name: '영석', num: 230 },
+                { name: '월석', num: 60 },
+                { name: '영단', num: 230 },
+                { name: '선단', num: 60 }
+            ]
+        },
+        # 성군당
+        {
+            made_item_name: '빛나는 백청 봉인부적',
+            made_item_num: 6,
+            made_price: 540,
+            made_time: 3.days,
+            materials: [
+                { name: '영석', num: 695 },
+                { name: '월석', num: 175 },
+                { name: '영단', num: 695 },
+                { name: '선단', num: 175 }
+            ]
+        },
+        {
+            made_item_name: '부활 부적꾸러미',
+            made_item_num: 35,
             made_price: 180,
             made_time: 1.day,
             materials: [
